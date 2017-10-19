@@ -21,6 +21,7 @@ public class TestPluginCommandExecutor implements CommandExecutor {
 				if(args[0].equalsIgnoreCase("reload")) {
 					//
 					plugin.reloadConfig();
+// 					config = YamlConfiguration.loadConfiguration(cFile);
 					return true;
 				}
 			}
