@@ -25,8 +25,9 @@ public class TestPluginConfigListener implements Listener{
 			FileConfiguration config = this.plugin.getConfig();
 			String msg = config.getString("join");
 			
-			OfflinePlayer offlinePlayer = Bukkit.getOfflinePlayer(event.getPlayer().getName());
-			if(!offlinePlayer.hasPlayedBefore()){
+// 			OfflinePlayer offlinePlayer = Bukkit.getOfflinePlayer(event.getPlayer().getName());
+			if(!event.getPlayer().hasPlayedBefore()){
+// 			if(!offlinePlayer.hasPlayedBefore()){
 				msg = config.getString("joinfirst");
 			}
 			event.getPlayer().sendMessage(msg);
