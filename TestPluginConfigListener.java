@@ -33,11 +33,12 @@ public class TestPluginConfigListener implements Listener{
 		}
 		
 		@EventHandler
-		public void onBlockBreak(BlockBreakEvent event) {
+		public void onMine(BlockBreakEvent event) { //onBlockBreak
 			FileConfiguration config = plugin.getConfig();
 			Boolean replace = config.getBoolean("replaceblock");
 			if(replace) {
 				event.setCancelled(true);
+// 				block.setType(Material.valueOf(Config.getString("PATH")));
 				event.getBlock().setType(Material.ICE);
 			}
 		}
