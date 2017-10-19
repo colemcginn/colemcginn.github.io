@@ -32,6 +32,11 @@ public class TestPluginCommandExecutor implements CommandExecutor {
 					for(int i=1;i<args.length;i++) {
 						msg.concat(args[i]);
 					}
+// 					StringBuilder builder = new StringBuilder();
+// 					for(String s : arr) {
+// 					    builder.append(s);
+// 					}
+// 					String str = builder.toString();
 					plugin.getConfig().set("join",msg);
 					plugin.saveConfig();
 					FileConfiguration config = plugin.getConfig();
