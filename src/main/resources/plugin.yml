@@ -3,15 +3,16 @@ main: io.github.colemcginn.TestPlugin.TestPlugin
 version: 1.0.0
 author: colemcginn
 commands:
-  basic:
-    description: This is a demo command.
-    usage: /<command> 
-    permission: basic
-    permission-message: You don't have <permission>
   testplugin:
     permission: TestPlugin
 permissions:
-  basic:
-    default: true
   TestPlugin:
+    default: true
+  TestPlugin.reload: 
+    default: true
+  TestPlugin.block: 
+    default: true
+  TestPlugin.join: 
+    default: true
+  TestPlugin.firstjoin: 
     default: true
